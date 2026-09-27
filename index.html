@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>★彡[AquaDreams 2000]彡★ :: Официальный сайт :: Лучший сайт интернета!!!</title>
+    <meta name="description" content="Добро пожаловать на мой сайт! Здесь пузыри, дельфины, музыка и всё крутое из 2000-х!">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Quicksand:wght@400;600;700&family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="loading-sphere"></div>
+            <p class="loading-text">Загрузка... <span id="loadPercent">0</span>%</p>
+            <div class="loading-bar">
+                <div class="loading-bar-fill" id="loadBar"></div>
+            </div>
+            <p class="loading-tip">💡 Совет: включите звук для полного погружения!</p>
+        </div>
+    </div>
+
+    <!-- ===== ПУЗЫРИ ===== -->
+    <div class="bubbles" id="bubbles"></div>
+
+    <!-- ===== ПЛАВАЮЩИЕ ИКОНКИ ===== -->
+    <div class="floating-icons">
+        <span class="float-icon" style="--x: 5%; --delay: 0s;">🐬</span>
+        <span class="float-icon" style="--x: 85%; --delay: 3s;">🐠</span>
+        <span class="float-icon" style="--x: 45%; --delay: 6s;">🦋</span>
+        <span class="float-icon" style="--x: 70%; --delay: 9s;">🌿</span>
+        <span class="float-icon" style="--x: 20%; --delay: 12s;">🐢</span>
+        <span class="float-icon" style="--x: 60%; --delay: 15s;">🐡</span>
+    </div>
+
+    <!-- ===== ПАНЕЛЬ УПРАВЛЕНИЯ (Fixed) ===== -->
+    <div class="control-panel">
+        <button class="ctrl-btn" id="musicToggle" title="Включить/выключить музыку">🎵</button>
+        <button class="ctrl-btn" id="themeToggle" title="Сменить тему">🎨</button>
+        <button class="ctrl-btn" id="cursorToggle" title="Сменить курсор">🖱️</button>
+        <button class="ctrl-btn" id="bubbleToggle" title="Пузыри">🫧</button>
+        <button class="ctrl-btn" id="topBtn" title="Наверх">⬆️</button>
+    </div>
+
+    <!-- ===== БЕГУЩАЯ СТРОКА ===== -->
+    <div class="marquee-bar">
+        <div class="marquee-content">
+            ★彡 Добро пожаловать на AquaDreams 2000! ★彡 Лучший сайт Рунета! ★彡 Подпишись на гостевую книгу! ★彡 Сегодня луна в 🌙 ★彡 Скачай обои для рабочего стола! ★彡 ICQ: 12345678 ★彡 Не забудь добавить в закладки! ★彡 Best viewed in Internet Explorer 6.0 при 800x600 ★彡
+        </div>
+    </div>
+
+    <!-- ===== НАВИГАЦИЯ ===== -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">💧</span>
+            <span class="logo-text">AquaDreams</span>
+            <span class="logo-badge">★</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">🏠 Главная</a></li>
+            <li><a href="#about">💾 О сайте</a></li>
+            <li><a href="#gallery">🖼️ Галерея</a></li>
+            <li><a href="#winamp">🎶 Плеер</a></li>
+            <li><a href="#guestbook">📖 Гостевая</a></li>
+            <li><a href="#links">🔗 Ссылки</a></li>
+        </ul>
+        <div class="nav-clock">
+            <span id="clock">00:00:00</span>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-window">
+            <div class="window-titlebar">
+                <span class="window-title">💧 AquaDreams.exe — Добро пожаловать</span>
+                <div class="window-controls">
+                    <span class="win-btn">_</span>
+                    <span class="win-btn">□</span>
+                    <span class="win-btn close">✕</span>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="glossy-text">Добро пожаловать</span>
+                        <br>
+                        <span class="gradient-text">в мир AquaDreams!</span>
+                    </h1>
+                    <p class="hero-subtitle" id="typingText"></p>
+                    <p class="hero-since">✨ Онлайн с 2000 года ✨</p>
+                    
+                    <div class="hero-buttons">
+                        <button class="glossy-btn" onclick="showMagic()">
+                            <span>Исследовать ✦</span>
+                        </button>
+                        <button class="glossy-btn win98-btn" id="win98Btn">
+                            <span>💾 Открыть окно</span>
+                        </button>
+                    </div>
+
+                    <div class="visitor-counter">
+                        <p>👥 Посетителей на сайте:</p>
+                        <div class="counter-digits">
+                            <span>0</span><span>0</span><span>4</span>
+                            <span>2</span><span>0</span><span>4</span>
+                        </div>
+                        <p class="counter-note">Вы — посетитель №<span id="visitorNum">4 204</span></p>
+                    </div>
+                </div>
+                
+                <div class="sphere-container">
+                    <div class="sphere"></div>
+                    <div class="sphere-shadow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+        <div class="section-header">
+            <span class="icon-3d">💎</span>
+            <h2 class="section-title">О сайте</h2>
+            <span class="icon-3d">💎</span>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">🌊</div>
+                <h3>Вода</h3>
+                <p>Прозрачность, пузыри, глянцевые поверхности и свежесть океана. Классика Windows Vista!</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌿</div>
+                <h3>Природа</h3>
+                <p>Зелёные листья, трава, солнце — технология в гармонии с природой.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💎</div>
+                <h3>Глянец</h3>
+                <p>Блестящие кнопки, отражения, градиенты и стеклянные эффекты в стиле Aero.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🕊️</div>
+                <h3>Свобода</h3>
+                <p>Небо, облака, полёт — оптимизм цифровой эпохи 2006-2013.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="gallery" id="gallery">
+        <div class="section-header">
+            <span class="icon-3d">🖼️</span>
+            <h2 class="section-title">Галерея обоев</h2>
+            <span class="icon-3d">🖼️</span>
+        </div>
+        <p class="gallery-note">💾 Скачай обои для рабочего стола 1024x768 бесплатно!!!</p>
+        <div class="gallery-grid">
+            <div class="gallery-item" style="--g1: #4fc3f7; --g2: #0288d1;" data-name="Океан 1">
+                <span>🐬</span>
+                <p>Океан</p>
+                <small>1024×768</small>
+            </div>
+            <div class="gallery-item" style="--g1: #81c784; --g2: #2e7d32;" data-name="Поляна">
+                <span>🌱</span>
+                <p>Природа</p>
+                <small>1024×768</small>
+            </div>
+            <div class="gallery-item" style="--g1: #64b5f6; --g2: #1565c0;" data-name="Капли">
+                <span>💧</span>
+                <p>Капли</p>
+                <small>1024×768</small>
+            </div>
+            <div class="gallery-item" style="--g1: #aed581; --g2: #558b2f;" data-name="Полёт">
+                <span>🦋</span>
+                <p>Полёт</p>
+                <small>1024×768</small>
+            </div>
+            <div class="gallery-item" style="--g1: #4dd0e1; --g2: #00838f;" data-name="Волны">
+                <span>🌊</span>
+                <p>Волны</p>
+                <small>1024×768</small>
+            </div>
+            <div class="gallery-item" style="--g1: #b39ddb; --g2: #4527a0;" data-name="Блеск">
+                <span>✨</span>
+                <p>Блеск</p>
+                <small>1024×768</small>
+            </div>
+            <div class="gallery-item" style="--g1: #ffb74d; --g2: #e65100;" data-name="Закат">
+                <span>🌅</span>
+                <p>Закат</p>
+                <small>1024×768</small>
+            </div>
+            <div class="gallery-item" style="--g1: #f06292; --g2: #ad1457;" data-name="Цветы">
+                <span>🌸</span>
+                <p>Цветы</p>
+                <small>1024×768</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WINAMP ПЛЕЕР ===== -->
+    <section class="winamp-section" id="winamp">
+        <div class="section-header">
+            <span class="icon-3d">🎶</span>
+            <h2 class="section-title">Виртуальный плеер</h2>
+            <span class="icon-3d">🎶</span>
+        </div>
+        <div class="winamp-player" id="winampPlayer">
+            <div class="winamp-titlebar">
+                <span>Winamp 2.95</span>
+                <div class="winamp-controls">
+                    <span>─</span><span>□</span><span>✕</span>
+                </div>
+            </div>
+            <div class="winamp-screen">
+                <div class="winamp-visualizer" id="visualizer">
+                    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                </div>
+                <div class="winamp-info">
+                    <div class="track-name" id="trackName">▶ Frutiger Aero Dreams</div>
+                    <div class="track-time">
+                        <span id="trackTime">0:00</span> / <span id="trackDuration">3:33</span>
+                    </div>
+                </div>
+                <div class="winamp-progress">
+                    <div class="winamp-progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+            <div class="winamp-buttons">
+                <button class="winamp-btn" id="prevBtn">⏮</button>
+                <button class="winamp-btn play" id="playBtn">▶</button>
+                <button class="winamp-btn" id="stopBtn">⏹</button>
+                <button class="winamp-btn" id="nextBtn">⏭</button>
+            </div>
+            <div class="winamp-playlist">
+                <p class="playlist-title">📋 Плейлист:</p>
+                <div class="playlist-item active" data-track="Frutiger Aero Dreams">1. Frutiger Aero Dreams</div>
+                <div class="playlist-item" data-track="Windows XP Vibes">2. Windows XP Vibes</div>
+                <div class="playlist-item" data-track="Y2K Bubblegum">3. Y2K Bubblegum</div>
+                <div class="playlist-item" data-track="Dial-up Memories">4. Dial-up Memories</div>
+                <div class="playlist-item" data-track="Aero Glass Love">5. Aero Glass Love</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ГОСТЕВАЯ КНИГА ===== -->
+    <section class="guestbook" id="guestbook">
+        <div class="section-header">
+            <span class="icon-3d">📖</span>
+            <h2 class="section-title">Гостевая книга</h2>
+            <span class="icon-3d">📖</span>
+        </div>
+        <div class="guestbook-container">
+            <form class="guestbook-form" id="guestbookForm">
+                <div class="form-row">
+                    <label>👤 Имя:</label>
+                    <input type="text" id="gbName" placeholder="Ваше имя" required maxlength="30">
+                </div>
+                <div class="form-row">
+                    <label>🌐 Сайт (необязательно):</label>
+                    <input type="url" id="gbSite" placeholder="http://">
+                </div>
+                <div class="form-row">
+                    <label>💬 Сообщение:</label>
+                    <textarea id="gbMessage" placeholder="Напишите что-нибудь доброе..." required maxlength="500"></textarea>
+                </div>
+                <button type="submit" class="glossy-btn">
+                    <span>📩 Отправить</span>
+                </button>
+            </form>
+
+            <div class="guestbook-entries" id="guestbookEntries">
+                <div class="gb-entry">
+                    <div class="gb-entry-header">
+                        <span class="gb-avatar">🐬</span>
+                        <strong>DolphinLover2000</strong>
+                        <span class="gb-date">14.03.2004 22:15</span>
+                    </div>
+                    <p>Крутой сайт!!! Особенно пузыри!!! Добавил в закладки!!! 😎</p>
+                </div>
+                <div class="gb-entry">
+                    <div class="gb-entry-header">
+                        <span class="gb-avatar">💾</span>
+                        <strong>WindowsXP_Fan</strong>
+                        <span class="gb-date">22.07.2005 15:42</span>
+                    </div>
+                    <p>Ностальгия... Помню, ставил Vista и любовался на эти обои. Спасибо за сайт! 💙</p>
+                </div>
+                <div class="gb-entry">
+                    <div class="gb-entry-header">
+                        <span class="gb-avatar">🎮</span>
+                        <strong>GameBoy_99</strong>
+                        <span class="gb-date">08.12.2006 03:21</span>
+                    </div>
+                    <p>А музыка будет? Хочу MIDI! А так всё супер, глянец как в 2000-х 👍</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ССЫЛКИ ===== -->
+    <section class="links-section" id="links">
+        <div class="section-header">
+            <span class="icon-3d">🔗</span>
+            <h2 class="section-title">Друзья сайта</h2>
+            <span class="icon-3d">🔗</span>
+        </div>
+        <p class="links-note">88x31 баннеры — добавь мой сайт! Обмен ссылками!</p>
+        <div class="links-grid">
+            <div class="link-banner" style="--b1: #ff6b6b; --b2: #c92a2a;">
+                <span>🐬</span><small>AquaDreams</small>
+            </div>
+            <div class="link-banner" style="--b1: #4dabf7; --b2: #1864ab;">
+                <span>💾</span><small>Retro PC</small>
+            </div>
+            <div class="link-banner" style="--b1: #51cf66; --b2: #2b8a3e;">
+                <span>🌿</span><small>Nature Web</small>
+            </div>
+            <div class="link-banner" style="--b1: #ffd43b; --b2: #e67700;">
+                <span>⚡</span><small>Flash Games</small>
+            </div>
+            <div class="link-banner" style="--b1: #da77f2; --b2: #862e9c;">
+                <span>🎵</span><small>MIDI Zone</small>
+            </div>
+            <div class="link-banner" style="--b1: #66d9e8; --b2: #0c8599;">
+                <span>📼</span><small>VHS Dreams</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 1999-2026 ✦ AquaDreams ✦ Сделано с 💙 в стиле Frutiger Aero & Y2K</p>
+            <p class="footer-badges">
+                <span class="badge">Best viewed in IE 6.0</span>
+                <span class="badge">800×600</span>
+                <span class="badge">HTML 4.01</span>
+                <span class="badge">Made with Notepad</span>
+            </p>
+            <p class="footer-webring">
+                🌐 <a href="#links">← Сайт #42 в кольце Aqua Web →</a> 🌐
+            </p>
+            <p class="footer-counters">
+                <span class="counter-badge">👥 4204</span>
+                <span class="counter-badge">💾 1337 MB</span>
+                <span class="counter-badge">⏱️ <span id="uptime">00:00:00</span></span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== ВСПЛЫВАЮЩИЕ ОКНА (динамические) ===== -->
+
+    <script src="script.js"></script>
+    <script src="music.js"></script>
+    <script src="cursors.js"></script>
+</body>
+</html>
